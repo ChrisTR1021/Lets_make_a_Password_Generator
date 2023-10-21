@@ -1,0 +1,24 @@
+body {
+ color: whitesmoke;
+ background-color: indigo;
+ align-items: center;
+ display: flex;
+ min-height: 100vh;
+ justify-content: center
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.wrapper {
+  background-color: grey;
+  padding: 25px;
+  border-radius: 5%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
