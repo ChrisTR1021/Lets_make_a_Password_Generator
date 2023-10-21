@@ -1,24 +1,37 @@
+.wrapper {
+  background-color: gold;
+  padding: 90px;
+  border-radius: 8%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
 body {
- color: whitesmoke;
- background-color: indigo;
- align-items: center;
- display: flex;
- min-height: 100vh;
- justify-content: center
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: black;
+  background-color: indigo
+}
+
+.styledup {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 h1 {
-  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 357%;
 }
 
-.wrapper {
-  background-color: grey;
-  padding: 25px;
-  border-radius: 5%;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 178%;
 }
 
+label {
+  font-weight: bold;
+}

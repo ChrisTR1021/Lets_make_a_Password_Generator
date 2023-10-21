@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <form>
-          <h4>Character Calculator</h4>
-          <input type="number" min="8" max="128" id="selectedamount">
-          </form>
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator Project</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div>
+      <h2>Generate a Password</h2>
+  </div>
+  <form class="styled up">
+    <label for="characterlimit">Character count</label>
+    <input type="number" min="8" max="128" value="8"
+    id="Characterspecifics">
+    <label for="add uppercase">Add Uppercase</label>
+    <input type="radio" id="adduppercase">
+    <label for="add specialcharacters">Add Special Characters</label>
+    <input type="radio" id="addspecialcharacters">
+    <label for="add numbers">Add Numbers</label>
+    <input type="radio" id="addnumbers">
+  </form>
+  <div>
+    <textarea
+      readonly
+      id="password"
+      placeholder="Your Secure Password"
+      aria-label="Generated Password"
+    ></textarea>
+  </div>
+  <div>
+    <button id="generate" class="btn">Generate Password</button>
+  </div>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
