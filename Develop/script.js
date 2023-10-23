@@ -27,10 +27,11 @@ function passwordgenerated(characterlimit, addUppercase, addnumbers,
   }
 
   function arraylowerandhigher(low, high) {
+    const array = [];
     for (let i = low; i <= high; i++) {
-
+      array.push(i);
     }
-    return array
+    return array;
   }
 
 
