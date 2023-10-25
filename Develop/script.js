@@ -12,22 +12,35 @@ const lowercaseChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "
 const symbolChars = ["!", "@", "#", "$", "%", "^", "&", "*",];
 const numberChar = ["0","1","2","3","4","5","6","7","8","9"];
 
-
 function generatePassword() {
-  const limit = characterLimitElement.value;
+  console.log(addSymbolsElement.checked);
+  const limit = Number(characterLimitElement.value);
   const symbolsincluded = addSymbolsElement.checked;
   const addUppercase = addUppercaseElement.checked;
   const addLowercase = addLowercaseElement.checked;
   const numbersincluded = addNumbersElement.checked;
-  
-  let possible_password = const symbolChars = ["!", "@", "#", "$", "%", "^", "&", "*"];
+  console.log(symbolsincluded);
   if (symbolsincluded === true) {
     possible_password = possible_password.concat(symbolChars);
   }
-
+  if (addUppercase === true) {
+    possible_password = possible_password.concat(uppercaseChars);
+  }
+  if (addLowercase === true) {
+    possible_password = possible_password.concat(lowercaseChars);
+  }
+  if (numbersincluded === true) {
+    possible_password = possible_password.concat(numberChar);
+  }
+  let newPassword = [];
+  for (let i = 0; i < limit; i++) {
+    let random_number = Math.floor(Math.random() * possible_password.length);
+    let character = possible_password[random_number];
+    newPassword.push(character);
+  }
+  return newPassword;
 }
-
-// Add event listener to generate button
+  // Add event listener to generate button
 generateBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const password = generatePassword()
