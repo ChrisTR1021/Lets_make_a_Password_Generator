@@ -19,8 +19,12 @@ function generatePassword() {
   const addUppercase = addUppercaseElement.checked;
   const addLowercase = addLowercaseElement.checked;
   const numbersincluded = addNumbersElement.checked;
-  let newPassword = "password"
-  return newPassword;
+  
+  let possible_password = const symbolChars = ["!", "@", "#", "$", "%", "^", "&", "*"];
+  if (symbolsincluded === true) {
+    possible_password = possible_password.concat(symbolChars);
+  }
+
 }
 
 // Add event listener to generate button
